@@ -1,43 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:melendez/pantallas_1223/panel_1223/witgets_1223/panel_pantallas_1223.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiappTenis());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiappTenis extends StatelessWidget {
+  const MiappTenis({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
+      debugShowCheckedModeBanner: false,
+      title: "Melendez zapateria 1223",
       theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
+          useMaterial3: true),
+      home: Panelpantalla_1223(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
-    );
-  }
+  } //
 }
